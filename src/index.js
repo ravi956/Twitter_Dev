@@ -15,6 +15,6 @@ app.listen(3000, async () => {
   // });
 
   const tweetRepo = new TweetRepository();
-  const tweet = await tweetRepo.getWithComments("6437e65080d28454bd80e52a");
-  console.log(tweet);
+  const tweet = await tweetRepo.getAll(2, 4);
+  console.log(tweet[0].contentWithEmail);
 });
